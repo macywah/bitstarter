@@ -9,8 +9,13 @@ fs.readFile('index.html',function read(err,data){
      throw err;
   }
   content = data;
- 
+  processFile();
+   
 });
+
+function processFile(){
+     console.log(content);
+}
 
 app.get('/', function(request, response) {
   response.send(content);
